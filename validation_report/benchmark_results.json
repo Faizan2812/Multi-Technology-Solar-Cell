@@ -1,0 +1,88 @@
+{
+  "mean_pce_error_pct": 0.6707514547938753,
+  "median_pce_error_pct": 0.4675835238621201,
+  "worst_pce_error_pct": 2.022418197359571,
+  "convergence_rate": 1.0,
+  "devices": [
+    {
+      "id": "D1",
+      "stack": "CBTS/CsPbI3/PCBM",
+      "scaps_pce": 16.71,
+      "our_pce": 16.669542477048775,
+      "error_pct": 0.24211563705101974,
+      "converged": true
+    },
+    {
+      "id": "D2",
+      "stack": "CBTS/CsPbI3/TiO2",
+      "scaps_pce": 17.9,
+      "our_pce": 17.854303259686166,
+      "error_pct": 0.25528905203258584,
+      "converged": true
+    },
+    {
+      "id": "D3",
+      "stack": "CBTS/CsPbI3/ZnO",
+      "scaps_pce": 17.86,
+      "our_pce": 17.857746292396314,
+      "error_pct": 0.012618743581665646,
+      "converged": true
+    },
+    {
+      "id": "D4",
+      "stack": "CBTS/CsPbI3/C60",
+      "scaps_pce": 14.47,
+      "our_pce": 14.316049955092874,
+      "error_pct": 1.0639256731660465,
+      "converged": true
+    },
+    {
+      "id": "D5",
+      "stack": "CBTS/CsPbI3/IGZO",
+      "scaps_pce": 17.76,
+      "our_pce": 17.76516809434564,
+      "error_pct": 0.02909963032453971,
+      "converged": true
+    },
+    {
+      "id": "D6",
+      "stack": "CBTS/CsPbI3/WS2",
+      "scaps_pce": 17.82,
+      "our_pce": 18.05384873073309,
+      "error_pct": 1.3122824395796302,
+      "converged": true
+    },
+    {
+      "id": "D7",
+      "stack": "CuI/Cs2SnI6/ZnO",
+      "scaps_pce": 14.65,
+      "our_pce": 14.749602126368828,
+      "error_pct": 0.6798779956916544,
+      "converged": true
+    },
+    {
+      "id": "D8",
+      "stack": "Cu2O/CsPbI3/TiO2",
+      "scaps_pce": 17.64,
+      "our_pce": 17.99675457001423,
+      "error_pct": 2.022418197359571,
+      "converged": true
+    },
+    {
+      "id": "D9",
+      "stack": "CuSCN/CsPbI3/TiO2",
+      "scaps_pce": 17.81,
+      "our_pce": 17.836304279404917,
+      "error_pct": 0.14769387650150714,
+      "converged": true
+    },
+    {
+      "id": "D10",
+      "stack": "Spiro-OMeTAD/CsPbI3/TiO2",
+      "scaps_pce": 17.18,
+      "our_pce": 17.018131190604638,
+      "error_pct": 0.9421933026505328,
+      "converged": true
+    }
+  ]
+}

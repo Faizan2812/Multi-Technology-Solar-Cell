@@ -1,0 +1,508 @@
+{
+ "schema_version": "1.0",
+ "description": "Reference registry and experimental benchmark targets for the v4.0 multi-technology engines (silicon, organic, tandem). Every benchmark and model parameterization cites a peer-reviewed source with DOI. 'verified' = the citation (title/authors/journal/year and, where marked, the DOI string) was cross-checked against the Consensus academic index and/or the publisher page during the v4.0 build; MEDIUM entries carry canonical, widely-cited DOIs that were not independently re-fetched in that pass.",
+ "last_updated": "2026-07-10",
+ "references": {
+  "richter_2012_prb": {
+   "citation": "A. Richter, S. W. Glunz, F. Werner, J. Schmidt, A. Cuevas, 'Improved quantitative description of Auger recombination in crystalline silicon', Phys. Rev. B 86, 165202 (2012)",
+   "doi": "10.1103/PhysRevB.86.165202",
+   "used_for": "Intrinsic Auger + radiative recombination parameterization in physics/silicon.py",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "niewelt_2022_solmat": {
+   "citation": "T. Niewelt et al., 'Reassessment of the intrinsic bulk recombination in crystalline silicon', Sol. Energy Mater. Sol. Cells 235, 111467 (2022)",
+   "doi": "10.1016/j.solmat.2021.111467",
+   "used_for": "Alternative intrinsic recombination model (auger_model='niewelt2022'); 29.4% c-Si single-junction limit",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "kerr_2002_jap": {
+   "citation": "M. J. Kerr, A. Cuevas, 'General parameterization of Auger recombination in crystalline silicon', J. Appl. Phys. 91, 2473 (2002)",
+   "doi": "10.1063/1.1432476",
+   "used_for": "Implied-Voc / lifetime methodology; historical Auger parameterization",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "green_2008_solmat": {
+   "citation": "M. A. Green, 'Self-consistent optical parameters of intrinsic silicon at 300 K including temperature coefficients', Sol. Energy Mater. Sol. Cells 92, 1305 (2008)",
+   "doi": "10.1016/j.solmat.2008.06.009",
+   "used_for": "c-Si absorption coefficient table alpha(lambda) in physics/silicon.py",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "tiedje_1984_ted": {
+   "citation": "T. Tiedje, E. Yablonovitch, G. D. Cody, B. G. Brooks, 'Limiting efficiency of silicon solar cells', IEEE Trans. Electron Devices 31, 711 (1984)",
+   "doi": "10.1109/T-ED.1984.21594",
+   "used_for": "Lambertian light-trapping absorptance A = alpha/(alpha + 1/(4 n^2 W))",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "altermatt_2003_jap": {
+   "citation": "P. P. Altermatt, A. Schenk, F. Geelhaar, G. Heiser, 'Reassessment of the intrinsic carrier density in crystalline silicon in view of band-gap narrowing', J. Appl. Phys. 93, 1598 (2003)",
+   "doi": "10.1063/1.1529297",
+   "used_for": "ni_eff = 9.65e9 cm^-3 at 300 K",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "green_1981_sse": {
+   "citation": "M. A. Green, 'Solar cell fill factors: General graph and empirical expressions', Solid-State Electron. 24, 788 (1981)",
+   "doi": "10.1016/0038-1101(81)90062-9",
+   "used_for": "Empirical FF0(voc) expression",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "yoshikawa_2017_natenergy": {
+   "citation": "K. Yoshikawa et al., 'Silicon heterojunction solar cell with interdigitated back contacts for a photoconversion efficiency over 26%', Nat. Energy 2, 17032 (2017)",
+   "doi": "10.1038/nenergy.2017.32",
+   "used_for": "SHJ-IBC preset benchmark (26.3%; improved to 26.6-26.7% in the companion paper)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "yoshikawa_2017_solmat": {
+   "citation": "K. Yoshikawa et al., 'Exceeding conversion efficiency of 26% by heterojunction interdigitated back contact solar cell with thin film Si technology', Sol. Energy Mater. Sol. Cells 173, 37 (2017)",
+   "doi": "10.1016/j.solmat.2017.06.024",
+   "used_for": "26.6% certified SHJ-IBC device (Fraunhofer ISE CalLab)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "lin_2023_natenergy": {
+   "citation": "H. Lin et al., 'Silicon heterojunction solar cells with up to 26.81% efficiency achieved by electrically optimized nanocrystalline-silicon hole contact layers', Nat. Energy 8, 789 (2023)",
+   "doi": "10.1038/s41560-023-01255-2",
+   "used_for": "SHJ both-side preset benchmark (26.81%, Voc 751.4 mV, FF up to 86.59%)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "richter_2021_natenergy": {
+   "citation": "A. Richter et al., 'Design rules for high-efficiency both-sides-contacted silicon solar cells with balanced charge carrier transport and recombination losses', Nat. Energy 6, 429 (2021)",
+   "doi": "10.1038/s41560-021-00805-w",
+   "used_for": "TOPCon back-junction preset benchmark (26.0%)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "wang_2024_natcomm": {
+   "citation": "G. Wang et al., '27.09%-efficiency silicon heterojunction back contact solar cell and going beyond', Nat. Commun. 15 (2024)",
+   "doi": "10.1038/s41467-024-47455-6",
+   "used_for": "Context: current certified HBC frontier for c-Si",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "green_2021_tables57": {
+   "citation": "M. A. Green, E. D. Dunlop, J. Hohl-Ebinger, M. Yoshita, N. Kopidakis, X. Hao, 'Solar cell efficiency tables (version 57)', Prog. Photovolt. Res. Appl. 29, 3 (2021)",
+   "doi": "10.1002/pip.3371",
+   "used_for": "PERC (24.06% LONGi record class) and Al-BSF representative presets; cross-technology record context",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "yuan_2019_joule": {
+   "citation": "J. Yuan et al., 'Single-Junction Organic Solar Cell with over 15% Efficiency Using Fused-Ring Acceptor with Electron-Deficient Core', Joule 3, 1140 (2019)",
+   "doi": "10.1016/j.joule.2019.01.004",
+   "used_for": "PM6:Y6 preset benchmark (15.7%; Voc 0.83 V, Jsc 25.3 mA/cm2, FF 74.8%) and 300 nm thickness roll-off (13.6%)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "li_2021_natenergy": {
+   "citation": "C. Li et al., 'Non-fullerene acceptors with branched side chains and improved molecular packing to exceed 18% efficiency in organic solar cells', Nat. Energy 6, 605 (2021)",
+   "doi": "10.1038/s41560-021-00820-x",
+   "used_for": "PM6:L8-BO preset benchmark (18.32%, certified 17.9%, FF 81.5%)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "cui_2021_advmater": {
+   "citation": "Y. Cui et al., 'Single-Junction Organic Photovoltaic Cell with 19% Efficiency', Adv. Mater. 33, 2102420 (2021)",
+   "doi": "10.1002/adma.202102420",
+   "used_for": "PBQx-TF:eC9-2Cl:F-BTA3 preset benchmark (19.0%, certified 18.7%)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "li_2025_natmater": {
+   "citation": "C. Li et al., 'Non-fullerene acceptors with high crystallinity and photoluminescence quantum yield enable >20% efficiency organic solar cells', Nat. Mater. 24 (2025)",
+   "doi": "10.1038/s41563-024-02087-5",
+   "used_for": "PM6:L8-BO-C4 preset benchmark (20.42%, certified 20.1%; Voc 0.894 V, FF 81.6%)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "koster_2005_prb": {
+   "citation": "L. J. A. Koster, E. C. P. Smits, V. D. Mihailetchi, P. W. M. Blom, 'Device model for the operation of polymer/fullerene bulk heterojunction solar cells', Phys. Rev. B 72, 085205 (2005)",
+   "doi": "10.1103/PhysRevB.72.085205",
+   "used_for": "BHJ drift-collection / recombination competition picture; P3HT:PCBM baseline",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "scharber_2006_advmater": {
+   "citation": "Scharber, M. C. et al., Design Rules for Donors in Bulk-Heterojunction Solar Cells - Towards 10% Energy-Conversion Efficiency, Advanced Materials 18, 789-794 (2006)",
+   "doi": "10.1002/adma.200501717",
+   "used_for": "Estimation model for NON-certified donor:acceptor pairs in the organic blend builder: Voc = (|HOMO_D| - |LUMO_A|)/e - 0.3 V with conservative EQE/FF assumptions; estimates always flagged EXTRAPOLATED",
+   "confidence": "HIGH",
+   "verified": true,
+   "verified_on": "2026-07-15 (Consensus: exact match, 4894 citations)"
+  },
+  "alashouri_2020_science": {
+   "citation": "A. Al-Ashouri et al., 'Monolithic perovskite/silicon tandem solar cell with >29% efficiency by enhanced hole extraction', Science 370, 1300 (2020)",
+   "doi": "10.1126/science.abd4016",
+   "used_for": "2020-grade tandem benchmark (29.15% certified; Voc 1.92 V, 1.68 eV top cell)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "chin_2023_science": {
+   "citation": "X. Y. Chin et al., 'Interface passivation for 31.25%-efficient perovskite/silicon tandem solar cells', Science 381, 59 (2023)",
+   "doi": "10.1126/science.adg0091",
+   "used_for": "2023-grade tandem benchmark (31.25% certified, textured Si)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "mariotti_2023_science": {
+   "citation": "S. Mariotti et al., 'Interface engineering for high-performance, triple-halide perovskite-silicon tandem solar cells', Science 381, 63 (2023)",
+   "doi": "10.1126/science.adf5872",
+   "used_for": "2023-grade tandem benchmark upper bound (32.5% certified, Voc 2.00 V)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "jia_2025_nature": {
+   "citation": "L. Jia et al., 'Efficient perovskite/silicon tandem with asymmetric self-assembly molecule', Nature 644, 912 (2025)",
+   "doi": "10.1038/s41586-025-09333-z",
+   "used_for": "2025-grade tandem benchmark (34.58% certified, LONGi/Soochow; Voc ~2 V)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "he_2023_nature": {
+   "citation": "R. He et al., 'Improving interface quality for 1-cm2 all-perovskite tandem solar cells', Nature 618, 80 (2023)",
+   "doi": "10.1038/s41586-023-05992-y",
+   "used_for": "All-perovskite tandem context (27.0%, certified 26.4%, Voc 2.12 V)",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "masuko_2014_jpv": {
+   "citation": "K. Masuko et al., 'Achievement of More Than 25% Conversion Efficiency With Crystalline Silicon Heterojunction Solar Cell', IEEE J. Photovolt. 4, 1433 (2014)",
+   "doi": "10.1109/JPHOTOV.2014.2352151",
+   "used_for": "SHJ-IBC lineage context (25.6% Panasonic)",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "shockley_1961_jap": {
+   "citation": "W. Shockley, H. J. Queisser, 'Detailed Balance Limit of Efficiency of p-n Junction Solar Cells', J. Appl. Phys. 32, 510 (1961)",
+   "doi": "10.1063/1.1736034",
+   "used_for": "Detailed-balance context for all technologies",
+   "confidence": "HIGH",
+   "verified": false
+  },
+  "pettersson_1999_jap": {
+   "citation": "L. A. A. Pettersson, L. S. Roman, O. Ingan\u00e4s, 'Modeling photocurrent action spectra of photovoltaic devices based on organic thin films', J. Appl. Phys. 86, 487 (1999)",
+   "doi": "10.1063/1.370757",
+   "used_for": "Transfer-matrix formalism in physics/tmm.py",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "burkhard_2010_advmater": {
+   "citation": "G. F. Burkhard, E. T. Hoke, M. D. McGehee, 'Accounting for Interference, Scattering, and Electrode Absorption to Make Accurate Internal Quantum Efficiency Measurements in Organic and Other Thin Solar Cells', Adv. Mater. 22, 3293 (2010)",
+   "doi": "10.1002/adma.201000883",
+   "used_for": "TMM implementation style (Stanford/McGehee script); ITO/PEDOT optical constants",
+   "confidence": "HIGH",
+   "verified": false
+  },
+  "sievers_2006_jap": {
+   "citation": "D. W. Sievers, V. Shrotriya, Y. Yang, 'Modeling optical effects and thickness dependent current in polymer bulk-heterojunction solar cells', J. Appl. Phys. 100, 114509 (2006)",
+   "doi": "10.1063/1.2388854",
+   "used_for": "Published oscillatory Jsc(L) benchmark for P3HT-class blends",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "kotlarski_2008_jap": {
+   "citation": "J. D. Kotlarski, P. W. M. Blom, L. J. A. Koster, M. Lenes, L. H. Slooff, 'Combined optical and electrical modeling of polymer:fullerene bulk heterojunction solar cells', J. Appl. Phys. 103, 084502 (2008)",
+   "doi": "10.1063/1.2905243",
+   "used_for": "Coupled optical-electrical benchmark; interference above 250 nm thickness",
+   "confidence": "HIGH",
+   "verified": true
+  },
+  "monestier_2007_solmat": {
+   "citation": "F. Monestier et al., 'Modeling the short-circuit current density of polymer solar cells based on P3HT:PCBM blend', Sol. Energy Mater. Sol. Cells 91, 405 (2007)",
+   "doi": "10.1016/j.solmat.2006.10.019",
+   "used_for": "P3HT:PCBM complex refractive index; Jsc(L) interference benchmark",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "rosa_2021_solener": {
+   "citation": "E. H. S. Rosa et al., 'Simulation of organic solar cells power conversion efficiency', Sol. Energy 221 (2021)",
+   "doi": "10.1016/j.solener.2021.04.041",
+   "used_for": "Published TMM-vs-experiment accuracy band (~16% average) contextualizing this tool's <=5% deviations",
+   "confidence": "MEDIUM",
+   "verified": true
+  },
+  "im_2023_molecules": {
+   "citation": "C. Im et al., 'Spatial Balance of Photogenerated Charge Carriers in Active Layers of Polymer Solar Cells', Molecules 28, 2985 (2023)",
+   "doi": "10.3390/molecules28072985",
+   "used_for": "NFA-blend TMM thickness study: PCE maximum near ~100 nm",
+   "confidence": "MEDIUM",
+   "verified": true
+  },
+  "kerremans_2020_aom": {
+   "citation": "R. Kerremans et al., 'The Optical Constants of Solution-Processed Semiconductors \u2014 New Challenges with Perovskites and Non-Fullerene Acceptors', Adv. Opt. Mater. 8, 2000319 (2020)",
+   "doi": "10.1002/adom.202000319",
+   "used_for": "PM6:Y6 complex refractive index (batch spread +/-10-15%)",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "rakic_1995_ao": {
+   "citation": "A. D. Rakic, 'Algorithm for the determination of intrinsic optical constants of metal films: application to aluminum', Appl. Opt. 34, 4755 (1995)",
+   "doi": "10.1364/AO.34.004755",
+   "used_for": "Al optical constants",
+   "confidence": "MEDIUM",
+   "verified": false
+  },
+  "johnson_1972_prb": {
+   "citation": "P. B. Johnson, R. W. Christy, 'Optical Constants of the Noble Metals', Phys. Rev. B 6, 4370 (1972)",
+   "doi": "10.1103/PhysRevB.6.4370",
+   "used_for": "Ag optical constants",
+   "confidence": "HIGH",
+   "verified": false
+  },
+  "burgelman_2000_tsf": {
+   "citation": "M. Burgelman, P. Nollet, S. Degrave, 'Modelling polycrystalline semiconductor solar cells', Thin Solid Films 361-362, 527 (2000)",
+   "doi": "10.1016/S0040-6090(99)00825-1",
+   "used_for": "SCAPS-1D \u2014 the incumbent this tool imports from / exports to",
+   "confidence": "HIGH",
+   "verified": false
+  },
+  "sahli_2018_natmater": {
+   "citation": "Sahli, F. et al., Fully textured monolithic perovskite/silicon tandem solar cells with 25.2% power conversion efficiency, Nature Materials 17, 820-826 (2018)",
+   "doi": "10.1038/s41563-018-0115-4",
+   "used_for": "nc-Si:H recombination-junction interconnect option in the tandem layer library (textured-compatible junction; certified 25.2% device)",
+   "confidence": "HIGH",
+   "verified": true,
+   "verified_on": "2026-07-14 (Consensus: exact title/venue/year match, 1180 citations)"
+  },
+  "richardson_2016_ees": {
+   "citation": "Richardson, G. et al., Can slow-moving ions explain hysteresis in the current-voltage curves of perovskite solar cells?, Energy & Environmental Science 9, 1476-1485 (2016)",
+   "doi": "10.1039/C5EE02740C",
+   "used_for": "Reduced-order scan-rate hysteresis model (utils/stability.py): ionic-drift origin of hysteresis, vanishing at fast and slow scan-rate limits with a peak at intermediate rates",
+   "confidence": "HIGH",
+   "verified": true,
+   "verified_on": "2026-07-15 (Consensus: exact match, 325 citations)"
+  },
+  "khenkin_2020_natenergy": {
+   "citation": "Khenkin, M. V. et al., Consensus statement for stability assessment and reporting for perovskite photovoltaics based on ISOS procedures, Nature Energy 5, 35-49 (2020)",
+   "doi": "10.1038/s41560-019-0529-5",
+   "used_for": "T80 lifetime metric and ISOS stability-protocol conventions behind the Arrhenius lifetime-projection tool (utils/stability.py)",
+   "confidence": "HIGH",
+   "verified": true,
+   "verified_on": "2026-07-15 (Consensus: exact match, 1353 citations)"
+  },
+  "skoplaki_2009_solen": {
+   "citation": "Skoplaki, E. & Palyvos, J. A., On the temperature dependence of photovoltaic module electrical performance: A review of efficiency/power correlations, Solar Energy 83, 614-624 (2009)",
+   "doi": "10.1016/j.solener.2008.10.008",
+   "used_for": "NOCT cell-temperature model and linear power-temperature correlation class used by the all-technology energy-yield estimator (utils/energy_yield.py)",
+   "confidence": "HIGH",
+   "verified": true,
+   "verified_on": "2026-07-15 (Consensus: exact match, 2570 citations)"
+  },
+  "steiner_2012_apl": {
+   "citation": "Steiner, M. A. & Geisz, J. F., Non-linear luminescent coupling in series-connected multijunction solar cells, Applied Physics Letters 101, 073912 (2012)",
+   "doi": "10.1063/1.4753823",
+   "used_for": "Luminescent-coupling formulation in physics/tandem.py: coupled current proportional to the luminescent junction's excess recombination (J_gen - J)",
+   "confidence": "HIGH",
+   "verified": true,
+   "verified_on": "2026-07-15 (Consensus: exact match, 124 citations)"
+  },
+  "jager_2020_solrrl": {
+   "citation": "Jaeger, K. et al., Perovskite/Silicon Tandem Solar Cells: Effect of Luminescent Coupling and Bifaciality, Solar RRL 5, 2000628 (2020)",
+   "doi": "10.1002/solr.202000628",
+   "used_for": "Magnitude anchor for tandem luminescent coupling (>50% of excess top-cell pairs usable by the silicon bottom cell) and energy-yield-with-LC context",
+   "confidence": "HIGH",
+   "verified": true,
+   "verified_on": "2026-07-15 (Consensus: exact match, 51 citations)"
+  },
+  "jain_2004_solmat": {
+   "citation": "Jain, A. & Kapoor, A., Exact analytical solutions of the parameters of real solar cells using Lambert W-function, Solar Energy Materials and Solar Cells 81, 269-277 (2004)",
+   "doi": "10.1016/j.solmat.2003.11.018",
+   "used_for": "Exact Lambert-W closed form of the single-diode J-V model used by the measurement-fitting workflow (utils/measurement_fit.py)",
+   "confidence": "HIGH",
+   "verified": false,
+   "note": "Canonical, widely cited paper; DOI from publisher record. Flagged for Consensus cross-check in the next audited build."
+  }
+ },
+ "benchmarks": {
+  "silicon": [
+   {
+    "id": "yoshikawa_2017_shj_ibc",
+    "preset": "SHJ-IBC (Kaneka 26.7%)",
+    "reference": "yoshikawa_2017_solmat",
+    "target": {
+     "PCE": 26.7,
+     "Voc": 0.738,
+     "Jsc": 42.65,
+     "FF": 0.849
+    },
+    "tolerance_PCE_pct": 3.0
+   },
+   {
+    "id": "lin_2023_shj",
+    "preset": "SHJ both-side (LONGi 26.81%)",
+    "reference": "lin_2023_natenergy",
+    "target": {
+     "PCE": 26.81,
+     "Voc": 0.7514,
+     "Jsc": 41.2,
+     "FF": 0.8659
+    },
+    "tolerance_PCE_pct": 3.0
+   },
+   {
+    "id": "richter_2021_topcon",
+    "preset": "TOPCon back junction (Fraunhofer 26.0%)",
+    "reference": "richter_2021_natenergy",
+    "target": {
+     "PCE": 26.0,
+     "Voc": 0.7323,
+     "Jsc": 42.05,
+     "FF": 0.843
+    },
+    "tolerance_PCE_pct": 3.0
+   },
+   {
+    "id": "perc_industrial",
+    "preset": "PERC industrial (~24%)",
+    "reference": "green_2021_tables57",
+    "target": {
+     "PCE": 24.06
+    },
+    "tolerance_PCE_pct": 5.0
+   },
+   {
+    "id": "albsf_legacy",
+    "preset": "Al-BSF legacy (~20%)",
+    "reference": "green_2021_tables57",
+    "target": {
+     "PCE": 20.1
+    },
+    "tolerance_PCE_pct": 6.0
+   }
+  ],
+  "organic": [
+   {
+    "id": "yuan_2019_pm6y6",
+    "preset": "PM6:Y6 (Joule 2019, 15.7%)",
+    "reference": "yuan_2019_joule",
+    "target": {
+     "PCE": 15.7,
+     "Voc": 0.83,
+     "Jsc": 25.3,
+     "FF": 0.748
+    },
+    "tolerance_PCE_pct": 4.0
+   },
+   {
+    "id": "yuan_2019_pm6y6_300nm",
+    "preset": "PM6:Y6 (Joule 2019, 15.7%)",
+    "reference": "yuan_2019_joule",
+    "override": {
+     "L_nm": 300
+    },
+    "target": {
+     "PCE": 13.6
+    },
+    "tolerance_PCE_pct": 20.0,
+    "note": "thickness roll-off check; analytical collection model, wider tolerance"
+   },
+   {
+    "id": "li_2021_l8bo",
+    "preset": "PM6:L8-BO (Nat. Energy 2021, 18.3%)",
+    "reference": "li_2021_natenergy",
+    "target": {
+     "PCE": 18.32,
+     "Voc": 0.87,
+     "FF": 0.815
+    },
+    "tolerance_PCE_pct": 4.0
+   },
+   {
+    "id": "cui_2021_19pct",
+    "preset": "PBQx-TF:eC9-2Cl (Adv. Mater. 2021, 19.0%)",
+    "reference": "cui_2021_advmater",
+    "target": {
+     "PCE": 19.0,
+     "Voc": 0.879,
+     "Jsc": 26.7,
+     "FF": 0.809
+    },
+    "tolerance_PCE_pct": 4.0
+   },
+   {
+    "id": "li_2025_204pct",
+    "preset": "PM6:L8-BO-C4 (Nat. Mater. 2025, 20.4%)",
+    "reference": "li_2025_natmater",
+    "target": {
+     "PCE": 20.42,
+     "Voc": 0.894,
+     "FF": 0.816
+    },
+    "tolerance_PCE_pct": 4.0
+   },
+   {
+    "id": "p3ht_pcbm",
+    "preset": "P3HT:PC61BM (legacy, ~4%)",
+    "reference": "koster_2005_prb",
+    "target": {
+     "PCE": 4.0
+    },
+    "tolerance_PCE_pct": 25.0,
+    "note": "processing-dependent legacy system; representative mid-range value"
+   }
+  ],
+  "tandem": [
+   {
+    "id": "alashouri_2020",
+    "grade": "2020",
+    "reference": "alashouri_2020_science",
+    "params": {
+     "Nt_top": 200000000000000.0,
+     "R_int": 0.07,
+     "parasitic": 0.05,
+     "Rs_int_ohm_cm2": 4.5,
+     "d_top_nm": 650
+    },
+    "target": {
+     "PCE": 29.15,
+     "Voc": 1.92,
+     "Jsc": 19.26,
+     "FF": 0.795
+    },
+    "tolerance_PCE_pct": 5.0,
+    "note": "PCE and Voc reproduced closely; the analytical engine trades ~7% low Jsc against ~6% high FF (documented in VALIDATION_MULTI_TECH.md)"
+   },
+   {
+    "id": "chin_mariotti_2023",
+    "grade": "2023",
+    "reference": "chin_2023_science",
+    "params": {
+     "Nt_top": 100000000000000.0,
+     "R_int": 0.05,
+     "parasitic": 0.035,
+     "Rs_int_ohm_cm2": 2.5
+    },
+    "target": {
+     "PCE_range": [
+      31.25,
+      32.5
+     ]
+    },
+    "tolerance_PCE_pct": 5.0
+   },
+   {
+    "id": "jia_2025",
+    "grade": "2025",
+    "reference": "jia_2025_nature",
+    "params": {
+     "Nt_top": 30000000000000.0,
+     "R_int": 0.03,
+     "parasitic": 0.02,
+     "Rs_int_ohm_cm2": 1.5
+    },
+    "target": {
+     "PCE": 34.58,
+     "Voc": 1.97
+    },
+    "tolerance_PCE_pct": 5.0
+   }
+  ]
+ }
+}

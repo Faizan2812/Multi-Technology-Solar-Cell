@@ -1,0 +1,67 @@
+cff-version: 1.2.0
+message: "If you use this tool in your research, please cite it as below."
+title: "Solar Cell Optimizer: an AI-driven open-source tool for design and optimization of solar cells"
+version: "1.1.0"
+date-released: 2026-07-04
+license: MIT
+repository-code: "https://github.com/Faizan2812/perovskite-solar-optimizer"
+authors:
+  - family-names: "Faizan"
+    given-names: "Muhammad"
+    affiliation: "Department of Computer Science, FAST NUCES, Karachi, Pakistan"
+keywords:
+  - solar cells
+  - perovskite
+  - CdTe
+  - drift-diffusion
+  - physics-informed neural networks
+  - Bayesian optimization
+  - conformal prediction
+abstract: >-
+  An open-source simulation and optimization tool for thin-film solar cells
+  (perovskite and CdTe technology families). It couples a from-scratch,
+  MMS-verified 1D drift-diffusion solver (Scharfetter-Gummel + Newton) with
+  coherent transfer-matrix optics, quasi-static mobile-ion hysteresis,
+  a conditional physics-informed neural network with gradient-based inverse
+  parameter prediction, from-scratch ML surrogates with nested cross-
+  validation and split-conformal calibrated uncertainty, and a hybrid
+  mixed-variable optimizer benchmarked head-to-head against quasi-Newton,
+  Levenberg-Marquardt-family, and PSO baselines. Validated against 10
+  published SCAPS-1D devices (mean PCE error 0.67%), the Gloeckler-2003
+  CdTe baseline (0.0% PCE error), and 4 certified experimental cells, with
+  every material parameter carrying literature provenance (DOI, method,
+  confidence tier) enforced by an automated audit.
+references:
+  - type: article
+    title: "Effect of various electron and hole transport layers on the performance of CsPbI3-based perovskite solar cells"
+    authors:
+      - family-names: "Hossain"
+        given-names: "M. K."
+    journal: "ACS Omega"
+    volume: 7
+    year: 2022
+    doi: "10.1021/acsomega.2c05912"
+  - type: conference-paper
+    title: "Numerical modeling of CIGS and CdTe solar cells: setting the baseline"
+    authors:
+      - family-names: "Gloeckler"
+        given-names: "M."
+      - family-names: "Fahrenbruch"
+        given-names: "A. L."
+      - family-names: "Sites"
+        given-names: "J. R."
+    conference: "3rd World Conference on Photovoltaic Energy Conversion"
+    year: 2003
+  - type: article
+    title: "Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations"
+    authors:
+      - family-names: "Raissi"
+        given-names: "M."
+      - family-names: "Perdikaris"
+        given-names: "P."
+      - family-names: "Karniadakis"
+        given-names: "G. E."
+    journal: "Journal of Computational Physics"
+    volume: 378
+    year: 2019
+    doi: "10.1016/j.jcp.2018.10.045"

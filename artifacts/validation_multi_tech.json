@@ -1,0 +1,223 @@
+{
+  "suite": "multi-technology validation v4.0",
+  "n_benchmarks": 14,
+  "n_pass": 14,
+  "mean_PCE_error_pct": 0.73,
+  "median_PCE_error_pct": 0.73,
+  "max_PCE_error_pct": 1.91,
+  "results": [
+    {
+      "id": "yoshikawa_2017_shj_ibc",
+      "reference": "yoshikawa_2017_solmat",
+      "doi": "10.1016/j.solmat.2017.06.024",
+      "target_PCE": 26.7,
+      "model": {
+        "PCE": 26.7706,
+        "Voc": 0.745,
+        "Jsc": 42.9954,
+        "FF": 0.8357
+      },
+      "error_PCE_pct": 0.26,
+      "tolerance_PCE_pct": 3.0,
+      "pass": true
+    },
+    {
+      "id": "lin_2023_shj",
+      "reference": "lin_2023_natenergy",
+      "doi": "10.1038/s41560-023-01255-2",
+      "target_PCE": 26.81,
+      "model": {
+        "PCE": 26.7548,
+        "Voc": 0.7539,
+        "Jsc": 41.8022,
+        "FF": 0.849
+      },
+      "error_PCE_pct": 0.21,
+      "tolerance_PCE_pct": 3.0,
+      "pass": true
+    },
+    {
+      "id": "richter_2021_topcon",
+      "reference": "richter_2021_natenergy",
+      "doi": "10.1038/s41560-021-00805-w",
+      "target_PCE": 26.0,
+      "model": {
+        "PCE": 25.9811,
+        "Voc": 0.7328,
+        "Jsc": 42.4621,
+        "FF": 0.8349
+      },
+      "error_PCE_pct": 0.07,
+      "tolerance_PCE_pct": 3.0,
+      "pass": true
+    },
+    {
+      "id": "perc_industrial",
+      "reference": "green_2021_tables57",
+      "doi": "10.1002/pip.3371",
+      "target_PCE": 24.06,
+      "model": {
+        "PCE": 23.6008,
+        "Voc": 0.7023,
+        "Jsc": 41.1026,
+        "FF": 0.8176
+      },
+      "error_PCE_pct": 1.91,
+      "tolerance_PCE_pct": 5.0,
+      "pass": true
+    },
+    {
+      "id": "albsf_legacy",
+      "reference": "green_2021_tables57",
+      "doi": "10.1002/pip.3371",
+      "target_PCE": 20.1,
+      "model": {
+        "PCE": 20.1627,
+        "Voc": 0.6525,
+        "Jsc": 38.8011,
+        "FF": 0.7964
+      },
+      "error_PCE_pct": 0.31,
+      "tolerance_PCE_pct": 6.0,
+      "pass": true
+    },
+    {
+      "id": "yuan_2019_pm6y6",
+      "reference": "yuan_2019_joule",
+      "doi": "10.1016/j.joule.2019.01.004",
+      "target_PCE": 15.7,
+      "model": {
+        "PCE": 15.568,
+        "Voc": 0.8291,
+        "Jsc": 25.2916,
+        "FF": 0.7424
+      },
+      "error_PCE_pct": 0.84,
+      "tolerance_PCE_pct": 4.0,
+      "pass": true
+    },
+    {
+      "id": "yuan_2019_pm6y6_300nm",
+      "reference": "yuan_2019_joule",
+      "doi": "10.1016/j.joule.2019.01.004",
+      "target_PCE": 13.6,
+      "model": {
+        "PCE": 13.4237,
+        "Voc": 0.8289,
+        "Jsc": 21.6439,
+        "FF": 0.7482
+      },
+      "error_PCE_pct": 1.3,
+      "tolerance_PCE_pct": 20.0,
+      "pass": true
+    },
+    {
+      "id": "li_2021_l8bo",
+      "reference": "li_2021_natenergy",
+      "doi": "10.1038/s41560-021-00820-x",
+      "target_PCE": 18.32,
+      "model": {
+        "PCE": 18.204,
+        "Voc": 0.8696,
+        "Jsc": 25.8052,
+        "FF": 0.8112
+      },
+      "error_PCE_pct": 0.63,
+      "tolerance_PCE_pct": 4.0,
+      "pass": true
+    },
+    {
+      "id": "cui_2021_19pct",
+      "reference": "cui_2021_advmater",
+      "doi": "10.1002/adma.202102420",
+      "target_PCE": 19.0,
+      "model": {
+        "PCE": 19.1946,
+        "Voc": 0.8787,
+        "Jsc": 26.6947,
+        "FF": 0.8183
+      },
+      "error_PCE_pct": 1.02,
+      "tolerance_PCE_pct": 4.0,
+      "pass": true
+    },
+    {
+      "id": "li_2025_204pct",
+      "reference": "li_2025_natmater",
+      "doi": "10.1038/s41563-024-02087-5",
+      "target_PCE": 20.42,
+      "model": {
+        "PCE": 20.6719,
+        "Voc": 0.8938,
+        "Jsc": 27.9671,
+        "FF": 0.827
+      },
+      "error_PCE_pct": 1.23,
+      "tolerance_PCE_pct": 4.0,
+      "pass": true
+    },
+    {
+      "id": "p3ht_pcbm",
+      "reference": "koster_2005_prb",
+      "doi": "10.1103/PhysRevB.72.085205",
+      "target_PCE": 4.0,
+      "model": {
+        "PCE": 4.0497,
+        "Voc": 0.5968,
+        "Jsc": 10.0073,
+        "FF": 0.6781
+      },
+      "error_PCE_pct": 1.24,
+      "tolerance_PCE_pct": 25.0,
+      "pass": true
+    },
+    {
+      "id": "alashouri_2020",
+      "reference": "alashouri_2020_science",
+      "doi": "10.1126/science.abd4016",
+      "target_PCE": 29.15,
+      "model": {
+        "PCE": 29.1555,
+        "Voc": 1.9215,
+        "Jsc": 17.9045,
+        "FF": 0.8474
+      },
+      "error_PCE_pct": 0.02,
+      "tolerance_PCE_pct": 5.0,
+      "pass": true
+    },
+    {
+      "id": "chin_mariotti_2023",
+      "reference": "chin_2023_science",
+      "doi": "10.1126/science.adg0091",
+      "target_PCE_range": [
+        31.25,
+        32.5
+      ],
+      "model": {
+        "PCE": 31.7514,
+        "Voc": 1.9401,
+        "Jsc": 19.0135,
+        "FF": 0.8608
+      },
+      "error_PCE_pct": 0.0,
+      "tolerance_PCE_pct": 5.0,
+      "pass": true
+    },
+    {
+      "id": "jia_2025",
+      "reference": "jia_2025_nature",
+      "doi": "10.1038/s41586-025-09333-z",
+      "target_PCE": 34.58,
+      "model": {
+        "PCE": 34.1628,
+        "Voc": 1.9718,
+        "Jsc": 20.016,
+        "FF": 0.8656
+      },
+      "error_PCE_pct": 1.21,
+      "tolerance_PCE_pct": 5.0,
+      "pass": true
+    }
+  ]
+}

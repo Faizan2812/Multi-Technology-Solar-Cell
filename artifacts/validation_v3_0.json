@@ -1,0 +1,56 @@
+{
+  "version": "3.0",
+  "provenance": {
+    "refs": 41,
+    "params": 351,
+    "errors": 0,
+    "status": "PASS"
+  },
+  "mms_production": {
+    "N": [
+      41,
+      81,
+      161,
+      321,
+      641
+    ],
+    "L2": [
+      0.0001817908468235146,
+      4.543239110882947e-05,
+      1.1352633461760532e-05,
+      2.833309962206194e-06,
+      7.035177531818831e-07
+    ],
+    "convergence_rate": 2.019183659001777,
+    "relL2_finest": 1.9898486958401336e-06,
+    "solver": "physics.dd_solver.solve_poisson_newton (production)"
+  },
+  "sg_diffusion_limit": {
+    "max_rel_error": 1.2691465646446493e-16,
+    "pass": true
+  },
+  "device_mesh_convergence": {
+    "N": [
+      140,
+      280,
+      560
+    ],
+    "PCE": [
+      18.32914887639499,
+      18.177891433890228,
+      18.105481384959834
+    ],
+    "observed_order": 1.6187084579435038,
+    "discretization_error_estimate_abs_PCE": 0.0724100489303936
+  },
+  "uq_calibration": {
+    "alpha": 0.05,
+    "target_coverage": 0.95,
+    "conformal_coverage": 0.9527777777777777,
+    "conformal_width": 10.371432883603525,
+    "bootstrap_coverage": 0.18333333333333335,
+    "bootstrap_width": 1.550340312800866,
+    "n_repeats": 10,
+    "pass": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "suite": "cross-tool validation final",
+  "n_checks": 9,
+  "n_pass": 9,
+  "checks": [
+    {
+      "id": "C1a",
+      "description": "energy conservation R+T+\u03a3A=1",
+      "pass": true,
+      "detail": "max err 9.73e-05"
+    },
+    {
+      "id": "C1b",
+      "description": "Fresnel limit glass/air",
+      "pass": true,
+      "detail": "R=0.04257999 vs analytic 0.04257999"
+    },
+    {
+      "id": "C1c",
+      "description": "P3HT:PCBM Jsc(L) interference vs published TMM",
+      "pass": true,
+      "detail": "maxima [80.0, 215.0] nm at [8.38, 10.11] mA/cm\u00b2, min 130.0 nm (Sievers 2006 / Kotlarski 2008 / Monestier 2007)"
+    },
+    {
+      "id": "C1d",
+      "description": "NFA blend first optical optimum near ~100 nm",
+      "pass": true,
+      "detail": "first-region optimum 90 nm (Im 2023)"
+    },
+    {
+      "id": "C1e",
+      "description": "PM6:Y6 TMM Jsc vs certified device (Yuan 2019)",
+      "pass": true,
+      "detail": "24.01 vs 25.3 mA/cm\u00b2 (5.1% dev; published TMM band ~16%, Rosa 2021)"
+    },
+    {
+      "id": "C1f",
+      "description": "independent-path PCE: TMM optics vs calibrated optics",
+      "pass": true,
+      "detail": "14.88% vs 15.57% (4.4% dev)"
+    },
+    {
+      "id": "C2a",
+      "description": ".def export \u2192 re-import round trip",
+      "pass": true,
+      "detail": "layer count + Eg + \u03c7 parameter-exact"
+    },
+    {
+      "id": "C2b",
+      "description": "published-SCAPS numerical cross-check (v3 suite)",
+      "pass": true,
+      "detail": "published-SCAPS suite: 10 devices, mean PCE error 0.7%, worst 2.0% (v3 artifact re-asserted)"
+    },
+    {
+      "id": "C3a",
+      "description": "silicon: Richter-2012 vs Niewelt-2022 intrinsic models",
+      "pass": true,
+      "detail": "26.77% vs 26.92% (0.56% dev)"
+    }
+  ]
+}
