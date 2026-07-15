@@ -1,0 +1,31 @@
+// Example SCAPS-1D definition file (CdTe baseline-style stack)
+// layers listed from the illuminated side, SCAPS 3.3 conventions
+layer CdS
+d 0.025
+Eg 2.4
+chi 4.0
+epsilon 10
+Nc 2.2e18
+Nv 1.8e19
+mun 100
+mup 25
+Nd 1.1e18
+defect 1
+Nt 1e17
+sigman 1e-12
+sigmap 1e-12
+
+layer CdTe
+d 4.0
+Eg 1.5
+chi 3.9
+epsilon 9.4
+Nc 8e17
+Nv 1.8e19
+mun 320
+mup 40
+Na 2e14
+defect 1
+Nt 2e14
+sigman 5e-14
+sigmap 5e-14
